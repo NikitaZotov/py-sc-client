@@ -50,7 +50,7 @@ VAR_INACTUAL_TEMP_ARC = ScType(b.SC_TYPE_VAR | b.SC_TYPE_INACTUAL_ARC | b.SC_TYP
 POS_ARC = ScType(b.SC_TYPE_POS_ARC)
 NEG_ARC = ScType(b.SC_TYPE_NEG_ARC)
 
-# fuzzy sc-arcs
+# fuzziness
 FUZ_ARC = ScType(b.SC_TYPE_FUZ_ARC)
 
 # positive sc-arcs

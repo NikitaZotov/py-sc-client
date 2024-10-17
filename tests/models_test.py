@@ -628,8 +628,11 @@ class TestScType(unittest.TestCase):
         assert t.CONNECTOR.merge(t.CONST_MEMBERSHIP_ARC) == t.CONST_MEMBERSHIP_ARC
         with pytest.raises(InvalidTypeError, match=CommonErrorMessages.INVALID_TYPE.value):
             t.CONST.merge(t.NODE)
+        with pytest.raises(InvalidTypeError, match=CommonErrorMessages.INVALID_TYPE.value):
             t.CONNECTOR.merge(t.NODE)
+        with pytest.raises(InvalidTypeError, match=CommonErrorMessages.INVALID_TYPE.value):
             t.COMMON_EDGE.merge(t.COMMON_ARC)
+        with pytest.raises(InvalidTypeError, match=CommonErrorMessages.INVALID_TYPE.value):
             t.COMMON_ARC.merge(t.MEMBERSHIP_ARC)
 
     def test_has_constancy(self):
